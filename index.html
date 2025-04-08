@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Fonts Optimization -->
+    <!-- ✅ Character Set & Viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- ✅ Title & Description -->
+    <title>Dehaat News - Stay Updated</title>
+    <meta name="description" content="Get the latest news and updates on agriculture, environment, and more with Dehaat News." />
+
+    <!-- ✅ Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -9,44 +17,64 @@
       rel="stylesheet"
     />
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="/dehaatnews.png" type="image/png" sizes="512x512" />
 
-    <title>{{TITLE}}</title>
-    <meta name="description" content="{{DESCRIPTION}}" />
+    <!-- ✅ SEO -->
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- ✅ Open Graph for Facebook, WhatsApp, LinkedIn -->
+    <meta property="og:title" content="Dehaat News - Stay Updated" />
+    <meta property="og:description" content="Stay updated with agricultural and global news." />
+    <meta property="og:image" content="https://dehaatnews.com/dehaatnews.png" />
+    <meta property="og:image:secure_url" content="https://dehaatnews.com/dehaatnews.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:url" content="https://dehaatnews.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- ✅ Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dehaat News - Stay Updated" />
+    <meta name="twitter:description" content="Get the latest updates from Dehaat News." />
+    <meta name="twitter:image" content="https://dehaatnews.com/dehaatnews.png" />
+    <meta name="twitter:image:alt" content="Dehaat News Logo" />
+
+    <!-- ✅ Structured Data: WebSite -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Dehaat News",
-        "url": "{{URL}}",
+        "url": "https://dehaatnews.com",
         "publisher": {
           "@type": "Organization",
           "name": "Dehaat News",
           "logo": {
             "@type": "ImageObject",
-            "url": "{{IMAGE}}"
+            "url": "https://dehaatnews.com/dehaatnews.png"
           }
         },
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "{{URL}}/search?q={search_term_string}",
+          "target": "https://dehaatnews.com/search?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       }
     </script>
 
-    <!-- NewsArticle Schema -->
+    <!-- ✅ Optional Structured Data: Example NewsArticle -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "NewsArticle",
-        "headline": "{{TITLE}}",
-        "description": "{{DESCRIPTION}}",
-        "datePublished": "{{PUBLISHED_DATE}}",
-        "dateModified": "{{MODIFIED_DATE}}",
+        "headline": "Dehaat News - Latest Agricultural and Global Updates",
+        "description": "Stay updated with agricultural and global news from Dehaat.",
+        "datePublished": "2024-03-25",
+        "dateModified": "2024-03-25",
         "author": {
           "@type": "Person",
           "name": "Dehaat News Team"
@@ -56,52 +84,30 @@
           "name": "Dehaat News",
           "logo": {
             "@type": "ImageObject",
-            "url": "{{IMAGE}}"
+            "url": "https://dehaatnews.com/dehaatnews.png"
           }
         },
         "image": {
           "@type": "ImageObject",
-          "url": "{{IMAGE}}",
+          "url": "https://dehaatnews.com/dehaatnews.png",
           "width": 1200,
           "height": 630
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "{{URL}}"
+          "@id": "https://dehaatnews.com/latest-news"
         }
       }
     </script>
-
-    <!-- Favicon -->
-    <link rel="icon" href="/dehaatnews.png" type="image/png" sizes="512x512" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="{{TITLE}}" />
-    <meta property="og:description" content="{{DESCRIPTION}}" />
-    <meta property="og:image" content="{{IMAGE}}" />
-    <meta property="og:url" content="{{URL}}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
-
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="{{TITLE}}" />
-    <meta name="twitter:description" content="{{DESCRIPTION}}" />
-    <meta name="twitter:image" content="{{IMAGE}}" />
-    <meta name="twitter:image:alt" content="Dehaat News Logo" />
-
-    <!-- Indexing -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
   </head>
 
   <body
-    style="
-      font-family: 'Poppins', 'Noto Sans Devanagari', Arial, Helvetica,
-        sans-serif;
-    "
+    style="font-family: 'Poppins', 'Noto Sans Devanagari', Arial, Helvetica, sans-serif;"
   >
+    <!-- ✅ React App Mount Point -->
     <div id="root"></div>
+
+    <!-- ✅ React Main Entry Point -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
